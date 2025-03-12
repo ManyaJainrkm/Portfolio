@@ -193,6 +193,7 @@
 						<!-- Contact -->
 							<article id="contact">
 								<h2 class="major">Contact</h2>
+								<form method="post" action="https://formspree.io/f/xeoaqpav">
 									<div class="fields">
 										<div class="field half">
 											<label for="name">Name</label>
@@ -222,26 +223,6 @@
 									<li><a href="https://github.com/ManyaJainrkm" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
 								</ul>
 							</article>
-
-						<!-- Add EmailJS library -->
-<script src="https://cdn.emailjs.com/dist/email.min.js"></script>
-<script>
-    emailjs.init("YOUR_PUBLIC_KEY"); // Replace with your EmailJS public key
-
-    document.getElementById("contact-form").addEventListener("submit", function (event) {
-        event.preventDefault();
-
-        emailjs.sendForm("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", this).then(
-            function () {
-                alert("Message sent successfully!");
-                document.getElementById("contact-form").reset();
-            },
-            function (error) {
-                alert("Failed to send message: " + JSON.stringify(error));
-            }
-        );
-    });
-</script>
 
 						<!-- pensées -->
 						<article id="pensees">
