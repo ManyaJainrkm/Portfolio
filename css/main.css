@@ -996,7 +996,7 @@ input, select, textarea {
 				border-top: 0;
 			}
 
-/* Button 
+/* Button */
 
 	input[type="submit"],
 	input[type="reset"],
@@ -1105,7 +1105,7 @@ input, select, textarea {
 	}
 
 /* BG */
-/*
+
 	#bg {
 		-moz-transform: scale(1.0);
 		-webkit-transform: scale(1.0);
@@ -1181,7 +1181,7 @@ input, select, textarea {
 		}
 
 /* wrapper */
-/*
+
 	#wrapper {
 		display: -moz-flex;
 		display: -webkit-flex;
@@ -1236,7 +1236,7 @@ input, select, textarea {
 		}
 
 /* Header */
-/*
+
 	#header {
 		display: -moz-flex;
 		display: -webkit-flex;
@@ -1502,7 +1502,7 @@ input, select, textarea {
 		}
 
 /* Main */
-/*
+
 	#main {
 		-moz-flex-grow: 1;
 		-webkit-flex-grow: 1;
@@ -1624,7 +1624,7 @@ input, select, textarea {
 		}
 
 /* Footer */
-/*
+
 	#footer {
 		-moz-transition: -moz-transform 0.325s ease-in-out, -moz-filter 0.325s ease-in-out, opacity 0.325s ease-in-out;
 		-webkit-transition: -webkit-transform 0.325s ease-in-out, -webkit-filter 0.325s ease-in-out, opacity 0.325s ease-in-out;
@@ -1664,7 +1664,7 @@ input, select, textarea {
               
 
 /* CSS */
-/*
+
 .button-30 {
   align-items: center;
   appearance: none;
