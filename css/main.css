@@ -997,6 +997,10 @@ input, select, textarea {
 			}
 
 /* Button */
+<!-- HTML !-->
+<button class="button-30" role="button">Button 30</button>
+
+/* CSS */
 .button-30 {
   align-items: center;
   appearance: none;
@@ -1008,7 +1012,7 @@ input, select, textarea {
   color: #36395A;
   cursor: pointer;
   display: inline-flex;
-  font-family: "Helvetica", sans-serif;
+  font-family: "Helvetica",sans-serif;
   height: 48px;
   justify-content: center;
   line-height: 1;
@@ -1025,7 +1029,7 @@ input, select, textarea {
   touch-action: manipulation;
   white-space: nowrap;
   will-change: box-shadow,transform;
-  font-size: 12px;
+  font-size: 18px;
 }
 
 .button-30:focus {
