@@ -1008,14 +1008,14 @@ input, select, textarea {
   color: #36395A;
   cursor: pointer;
   display: inline-flex;
-  font-family: "JetBrains Mono",monospace;
-  height: 48px;
+  font-family: "Helvetica", sans-serif;
+  height: 36px;
   justify-content: center;
   line-height: 1;
   list-style: none;
   overflow: hidden;
-  padding-left: 16px;
-  padding-right: 16px;
+  padding-left: 12px;
+  padding-right: 12px;
   position: relative;
   text-align: left;
   text-decoration: none;
@@ -1025,7 +1025,7 @@ input, select, textarea {
   touch-action: manipulation;
   white-space: nowrap;
   will-change: box-shadow,transform;
-  font-size: 18px;
+  font-size: 12px;
 }
 
 .button-30:focus {
