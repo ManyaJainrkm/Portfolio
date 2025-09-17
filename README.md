@@ -13,8 +13,8 @@ Welcome to my personal portfolio repository! This project showcases my work, ski
 
 ## 🧠 About Me  
 
-Hi, I'm **Manya Jain** — a passionate developer with experience in web development, DevOps, and data analytics.  
-I love building projects that solve problems and make an impact!  
+Hi, I'm **Manya Jain** — a passionate developer and CS Major with work and research experience in Web Development, DevOps, and Data Analytics.  
+I love building projects that solve problems and make an impact, and I'm good with errors :)  
 
 ---
 
