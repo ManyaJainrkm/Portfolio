@@ -23,35 +23,6 @@ The site is organized into sections:
 - Font Awesome for icons
 - GitHub Pages for hosting
 
-## Project structure
-
-```
-Portfolio/
-  index.html          Main page and all content sections
-  css/
-    main.css          Base template styles
-    animations.css    Custom styles for the project cards and layout
-    fontawesome-all.min.css
-  js/
-    animations.js     Flip interaction for the project cards
-    main.js, util.js, particles.js, and other template scripts
-  images/             Photos and icons
-  fonts/              Font Awesome web fonts
-  Resume.pdf
-```
-
-## Running locally
-
-Clone the repository and open the page in a browser:
-
-```bash
-git clone https://github.com/ManyaJainrkm/Portfolio.git
-cd Portfolio
-open index.html
-```
-
-No build step or dependencies are required.
-
 ## Contact
 
 - Email: manyajainrkm@gmail.com
