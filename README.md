@@ -1,49 +1,59 @@
-# 🚀 My Portfolio  
+# Personal Portfolio
 
-Welcome to my personal portfolio repository! This project showcases my work, skills, and projects — all in one place.  
+Source for my personal portfolio website, built as a single page site and deployed with GitHub Pages. It presents my education, work experience, projects, and background in music.
 
-## 🎯 What's Inside  
+**Live site:** https://manyajainrkm.github.io/Portfolio/
 
-- 🌟 **About Me** — A quick introduction.  
-- 💼 **Projects** — My best projects, with links and descriptions.  
-- 🎨 **Skills** — Tools and technologies I use.  
-- 🌐 **Live Website** — Deployed with GitHub Pages.  
+## Overview
 
----
+The site is organized into sections:
 
-## 🧠 About Me  
+- Introduction: a short bio.
+- Education: academic background.
+- Work: internships and research roles across GenAI, DevOps, and data analytics.
+- Projects: selected work, shown as interactive cards that flip to reveal a description and a link to each live demo.
+- Music: classical and Western training, and Harmoneyes, a browser instrument built at the intersection of music and code.
+- Contact: a message form and social links.
 
-Hi, I'm **Manya Jain** — a passionate developer and CS Major with work and research experience in Web Development, DevOps, and Data Analytics.  
-I love building projects that solve problems and make an impact, and I'm good with errors :)  
+## Tech stack
 
----
+- HTML5 and CSS3 for structure and styling
+- Vanilla JavaScript for the interactive project cards
+- particles.js for the animated background
+- Font Awesome for icons
+- GitHub Pages for hosting
 
-## 💼 Featured Projects  
+## Project structure
 
-| Project | Description | Live Demo |
-|---------|-------------|-----------|
-| 🚀 Portfolio Website | A personal website showcasing my work and skills | [Live Site](https://ManyaJainrkm.github.io/Portfolio) |
-| 📊 Data Dashboard | An interactive dashboard built with Tableau for data visualization | Coming soon! |
-| 🛠️ DevOps Setup | Automated deployment pipeline for a full-stack web app | Coming soon! |
+```
+Portfolio/
+  index.html          Main page and all content sections
+  css/
+    main.css          Base template styles
+    animations.css    Custom styles for the project cards and layout
+    fontawesome-all.min.css
+  js/
+    animations.js     Flip interaction for the project cards
+    main.js, util.js, particles.js, and other template scripts
+  images/             Photos and icons
+  fonts/              Font Awesome web fonts
+  Resume.pdf
+```
 
----
+## Running locally
 
-## 🔧 Tech Stack  
-
-Here’s what I used to build this portfolio:  
-
-- 💻 **HTML5** & **CSS3** — Structure & styling  
-- 🎯 **JavaScript** — Interactive elements  
-- 🛠️ **GitHub Pages** — Hosting & deployment  
-- 🚀 **VS Code** — Development environment  
-
----
-
-## 🌟 How to Run Locally  
-
-If you’d like to clone this repo and run it locally:  
+Clone the repository and open the page in a browser:
 
 ```bash
 git clone https://github.com/ManyaJainrkm/Portfolio.git
 cd Portfolio
+open index.html
+```
 
+No build step or dependencies are required.
+
+## Contact
+
+- Email: manyajainrkm@gmail.com
+- LinkedIn: https://www.linkedin.com/in/manya-jainn
+- GitHub: https://github.com/ManyaJainrkm
