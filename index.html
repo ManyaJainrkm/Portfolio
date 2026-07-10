@@ -172,6 +172,67 @@
 								<h2 class="major">Work</h2>
 
 								<div>
+									<h4 style="float: left;">Software Engineer Intern, GenAI<br>Safexpress Pvt. Ltd., Gurugram, India</h4>
+									<h4 style="float:right;">May 2026 - Aug 2026</h4>
+								</div>
+								<ul style="clear:both;">
+									<li>
+										Worked on <b>SIA / BI Co-pilot</b> — a Snowflake Cortex-powered GenAI assistant that answers natural-language business questions over the data of India's largest B2B logistics network — reporting into the IT Digital &amp; Analytics team.
+									</li>
+									<li>
+										Ran systematic QA against the live Cortex agent across its four core skill files (<b>Orchestration, Geo-Disambiguation, Sales, Response</b>), documenting a full <i>prompt &rarr; failure &rarr; fix</i> test log and rebuilding improved <b>preprod_v2 / v3 / v4</b> skillsets.
+									</li>
+									<li>
+										Found and fixed high-impact correctness bugs: geo-disambiguation not triggering for names that exist at up to <b>6 geographic levels</b> (e.g. Chandigarh, Delhi, Chennai); mandatory waybill filters being skipped (<code>CANCEL_RSN = 0</code> vs <code>IS NULL</code>) that silently pulled cancelled shipments into totals; and forecasts/predictions leaking into answers against policy.
+									</li>
+									<li>
+										Designed <b>orchestration gates</b> to refuse off-topic and web-search queries, enforce skill-invocation order (Geo &rarr; Domain &rarr; Response), and added an <b>Output Contract</b> so the agent stops exposing its internal reasoning and raw column names on complex multi-step questions.
+									</li>
+									<li>
+										Added <b>fuzzy + phonetic matching</b> (SOUNDEX, exact + normalization; evaluated Jaro-Winkler, Metaphone and edit-distance) to collapse duplicate customer and company names entered inconsistently across records.
+									</li>
+									<li>
+										Authored the <b>Inbound/Outbound (Booking vs Delivery)</b> disambiguation logic and a default-to-Region rule; standardized number formatting (L / Cr, 2 decimals) and Slack markdown (monospace code-block tables) for clean delivery inside Slack.
+									</li>
+									<li>
+										Reverse-engineered the legacy operations reporting stack — tracing <b>30+ colour-coded TIBCO / Confluence reports</b> (Pravega) back to their Snowflake source queries and documenting key tables and business purpose to feed the Copilot's semantic views.
+									</li>
+									<li>
+										Wrote SQL directly on Snowflake (CTEs, window functions, <code>QUALIFY</code>, anti-joins, GROUP BY pivots) to validate agent answers against ground truth instead of trusting the bot.<br>
+										<b>Tools:</b> Snowflake Cortex, SQL, Slack, Python (pandas, openpyxl), Semantic Views, Git
+									</li>
+								</ul>
+
+								<div>
+									<h4 style="float: left;">Student Researcher, Applied AI Systems<br>CIPS-AI Lab, Arizona State University</h4>
+									<h4 style="float:right;">Feb 2026 - Present</h4>
+								</div>
+								<ul style="clear:both;">
+									<li>
+										Research intern in an <b>Explainable Legal-AI</b> group (PI: Prof. Hasan Davulcu) building ML pipelines and knowledge graphs over legal-enforcement and case-law corpora.
+									</li>
+									<li>
+										Set up and deployed an <b>SEC-litigation scraper pipeline</b> both locally (Python venv) and on ASU's <b>Sol HPC supercomputer</b> (mamba env, SLURM allocation, VPN/SSH), preparing reproducible compute for the team's experiments.
+									</li>
+									<li>
+										Ran a 16-section <b>data-profiling report</b> on a 902-case corpus, surfacing data-quality gaps (admission-status only 64.7% populated) and class imbalance (~2:1; 76% consent judgments) that directly shaped the classification target design.
+									</li>
+									<li>
+										Wrote an original <b>TF-IDF classification experiment</b> testing whether multi-word legal phrases improve accuracy — comparing unigram / bigram / trigram features across Random Forest, Gradient Boosting and Logistic Regression with 5-fold cross-validation (F1-macro) — validating that bigram/trigram features let the model read phrases like <i>&ldquo;consent judgment&rdquo;</i> as single semantic units.
+									</li>
+									<li>
+										Built <b>Python ETL</b> to clean and structure unstructured legal documents for downstream ML, with structured logging for reproducibility across <b>20+ evaluation runs</b>.
+									</li>
+									<li>
+										Prototyped <b>Neo4j knowledge graphs</b> linking cases, firms and statutes to support Cypher querying and retrieval-augmented workflows.
+									</li>
+									<li>
+										Currently extracting citations from <b>7,500 filtered Indian land-dispute cases</b> (Indian Kanoon) to build a citation graph for Louvain community detection, as the project pivoted to Indian case law.<br>
+										<b>Tools:</b> Python (scikit-learn, pandas, TF-IDF), Neo4j, ASU Sol HPC / SLURM, Cypher, Git
+									</li>
+								</ul>
+
+								<div>
 									<h4 style="float: left;">DevOps Intern, National Urban Digital Mission<br>National Institute of Urban Affairs, Govt. of India</h4>
 									<h4 style="float:right;">Aug 2024 - May 2025</h4>
 								</div>
@@ -325,64 +386,97 @@
 
 						<!--Projects-->
 						<article id="projects">
-    						<h2 class="major">Project Work</h2>
+					<h2 class="major">Project Work</h2>
 
-   						 <!-- ASU Project -->
-    						<div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 10px;">
-        						<h4>HireMate – LinkedIn Assistant<br>Arizona State University, Tempe</h4>
-    						</div>
-    						<p style="clear:both;">
-        					An explainable conversational AI system designed to enhance job matching using structured data extraction and knowledge graph reasoning.
-        					HireMate integrates <b>resume parsing</b>, <b>job post analysis</b>, and <b>retrieval-augmented generation (RAG)</b> to recommend personalized roles aligned with a user’s skills and background.
-        					It emphasizes interpretability, feedback-driven improvement, and real-time matching accuracy.<br><br>
+					<div class="project-grid">
 
-        						<b>Key Contributions:</b><br>
-        					• Developed the <b>resume parsing pipeline</b> using heuristic and LLM-based extractors (OpenAI, Ollama).<br>
-        					• Implemented <b>cosine similarity and RAG-based matching</b> for semantic alignment between resumes and job descriptions.<br>
-        					• Built a <b>Knowledge Graph</b> (GraphSAGE, GAT) for explainable and interconnected job recommendations.<br>
-        					• Designed and tested the <b>chatbot feedback loop</b> for human-in-the-loop profile refinement.<br><br>
+						<div class="flip-card" tabindex="0" role="button" aria-label="Harmoneyes — click to flip for details">
+							<div class="flip-card-inner">
+								<div class="flip-face flip-front">
+									<div class="card-kicker">Creative coding</div>
+									<h3 class="card-title">Harmoneyes</h3>
+									<div class="card-sub">Music &times; Computer Vision</div>
+									<div class="card-tools"><span>MediaPipe</span><span>Tone.js</span><span>Canvas</span></div>
+									<div class="flip-hint">Click to flip <span class="arrow">&#8635;</span></div>
+								</div>
+								<div class="flip-face flip-back">
+									<p class="card-desc">A webcam instrument you play with your hands &mdash; hover over floating discs to sing layered harmony chords in real time, with a live Western &harr; Hindustani Sargam toggle.</p>
+									<a class="card-demo" href="https://manyajainrkm.github.io/Harmoneyes/" target="_blank" rel="noopener">Play live demo <span class="arrow">&rarr;</span></a>
+									<div class="flip-hint back">&larr; Back</div>
+								</div>
+							</div>
+						</div>
 
-        						<b>Tools & Technologies:</b><br>
-        					Python, PyTorch, Neo4j, Ollama, OpenAI API, Browser Use (web scraping), Pandas, Scikit-learn, Matplotlib, JSONL, Git/GitHub
-   							</p>
+						<div class="flip-card" tabindex="0" role="button" aria-label="Setu — click to flip for details">
+							<div class="flip-card-inner">
+								<div class="flip-face flip-front">
+									<div class="card-kicker">AI product concept</div>
+									<h3 class="card-title">Setu</h3>
+									<div class="card-sub">Specialized conversational AI</div>
+									<div class="card-tools"><span>AI Agents</span><span>Product Design</span><span>cto.new</span></div>
+									<div class="flip-hint">Click to flip <span class="arrow">&#8635;</span></div>
+								</div>
+								<div class="flip-face flip-back">
+									<p class="card-desc">A &ldquo;bridge&rdquo; to specialized support AI &mdash; seven distinct personas, each with its own focus, instead of one generic assistant. Product &amp; persona design by me.</p>
+									<a class="card-demo" href="https://95725f63e1f1d569a51bb5a5c2062125.ctonew.app/" target="_blank" rel="noopener">Open live demo <span class="arrow">&rarr;</span></a>
+									<div class="flip-hint back">&larr; Back</div>
+								</div>
+							</div>
+						</div>
 
-    					<!-- Capstone Project -->
-    						<div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 10px;">
-        						<h4>Portal Quickstart: Accelerating Digital Service Deployments through Containerized Infrastructure and Automated Pipelines<br>Capstone Project, Manipal University Jaipur</h4>
-    						</div>
-    						<p style="clear:both;">
-        					Designed and deployed the UPYOG platform locally to support urban e-governance services, contributing to its live implementation for Urban Local Bodies (ULBs) across India.
-        					This project established a reusable Quickstart template for future digital public infrastructure rollouts under the National Urban Digital Mission (NUDM).<br><br>
+						<div class="flip-card" tabindex="0" role="button" aria-label="HireMate — click to flip for details">
+							<div class="flip-card-inner">
+								<div class="flip-face flip-front">
+									<div class="card-kicker">Arizona State University</div>
+									<h3 class="card-title">HireMate</h3>
+									<div class="card-sub">Explainable job-matching</div>
+									<div class="card-tools"><span>Python</span><span>Neo4j</span><span>LangChain</span><span>RAG</span></div>
+									<div class="flip-hint">Click to flip <span class="arrow">&#8635;</span></div>
+								</div>
+								<div class="flip-face flip-back">
+									<p class="card-desc">An explainable job-matching assistant combining r&eacute;sum&eacute; parsing, RAG retrieval and a knowledge graph, with a human-in-the-loop feedback chatbot.</p>
+									<a class="card-demo" href="https://github.com/ManyaJainrkm" target="_blank" rel="noopener">View on GitHub <span class="arrow">&rarr;</span></a>
+									<div class="flip-hint back">&larr; Back</div>
+								</div>
+							</div>
+						</div>
 
-        						<b>Tools & Technologies:</b><br>
-        					- Containerization & Orchestration: Docker, Kubernetes (K3s)<br>
-        					- CI/CD & Version Control: Jenkins, GitHub<br>
-        					- Monitoring & Visualization: Prometheus, Grafana<br>
-        					- Programming Languages: Java, Bash<br>
-        					- Documentation: GitBook, Dia (for architecture diagrams)<br>
-    						</p>
+						<div class="flip-card" tabindex="0" role="button" aria-label="Portal Quickstart — click to flip for details">
+							<div class="flip-card-inner">
+								<div class="flip-face flip-front">
+									<div class="card-kicker">Capstone &middot; NUDM</div>
+									<h3 class="card-title">Portal Quickstart</h3>
+									<div class="card-sub">Containerized e-governance</div>
+									<div class="card-tools"><span>Docker</span><span>Kubernetes</span><span>Jenkins</span></div>
+									<div class="flip-hint">Click to flip <span class="arrow">&#8635;</span></div>
+								</div>
+								<div class="flip-face flip-back">
+									<p class="card-desc">A reusable, containerized Quickstart that stands up the UPYOG e-governance platform for Urban Local Bodies across India &mdash; a repeatable deployment pipeline.</p>
+									<a class="card-demo" href="https://upyog.niua.org/" target="_blank" rel="noopener">View live platform <span class="arrow">&rarr;</span></a>
+									<div class="flip-hint back">&larr; Back</div>
+								</div>
+							</div>
+						</div>
 
-   						<!-- Tableau Dashboard Project -->
-    						<div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 10px;">
-        						<h4>Smart Cities Dashboard Analytics<br>Ministry of Housing and Urban Affairs, Govt. of India</h4>
-    						</div>
-    						<p style="clear:both;">
-        					Designed and published multiple <b>interactive Tableau dashboards</b> as part of the Smart Cities Mission under the Ministry of Housing and Urban Affairs.
-        					These dashboards analyze and visualize <b>urban development metrics</b> across 100+ Indian cities — including education, infrastructure, governance, and sustainability indicators.<br><br>
+						<div class="flip-card" tabindex="0" role="button" aria-label="Smart Cities Dashboards — click to flip for details">
+							<div class="flip-card-inner">
+								<div class="flip-face flip-front">
+									<div class="card-kicker">Housing &amp; Urban Affairs</div>
+									<h3 class="card-title">Smart Cities Dashboards</h3>
+									<div class="card-sub">Urban analytics, 100+ cities</div>
+									<div class="card-tools"><span>Tableau</span><span>SQL</span><span>Excel</span></div>
+									<div class="flip-hint">Click to flip <span class="arrow">&#8635;</span></div>
+								</div>
+								<div class="flip-face flip-back">
+									<p class="card-desc">Interactive Tableau dashboards visualizing urban-development metrics &mdash; education, infrastructure, governance and sustainability &mdash; across 100+ Indian cities.</p>
+									<a class="card-demo" href="https://public.tableau.com/app/profile/manya.jain7899/vizzes" target="_blank" rel="noopener">View dashboards <span class="arrow">&rarr;</span></a>
+									<div class="flip-hint back">&larr; Back</div>
+								</div>
+							</div>
+						</div>
 
-        						<b>Key Contributions:</b><br>
-        					• Cleaned and integrated large open datasets from <b>AMPLIFI</b>, <b>IUDX</b>, and <b>Open Data Portal</b>.<br>
-        					• Created dynamic visual stories tracking dropout rates, public transport coverage, and municipal KPIs.<br>
-        					• Supported policy reporting through <b>data storytelling</b> and multi-layer visualization.<br><br>
-
-        						<b>Tools & Technologies:</b><br>
-        					Tableau Public, Excel, CSV Datasets, Data Blending, Calculated Fields, Interactive Filters<br><br>
-
-        						<a href="https://public.tableau.com/app/profile/manya.jain7899/vizzes" target="_blank" style="color: #8ab4f8; text-decoration: none;">
-            				🌐 View Public Dashboards on Tableau
-        						</a>
-    						</p>
-						</article>
+					</div>
+				</article>
 
 
 
@@ -399,6 +493,19 @@
 								(ragas and melodic structure) and Western notation-based guitar curriculum, and I’ve performed in band and
 								ensemble settings as both a vocalist and guitarist.
 							</p>
+
+							<h3 style="margin-top: 18px;">Where music meets code</h3>
+							<div class="music-highlight">
+								<p>
+									This is where my two worlds meet. I built <b>Harmoneyes</b> — a browser instrument you play with your hands
+									over the webcam, no keyboard or mouse. It maps your finger position to notes and chord qualities and sings
+									them back as layered harmony in real time. Because I trained in both Hindustani classical and Western notation,
+									I built a live <b>Sa&nbsp;Re&nbsp;Ga &harr; A&nbsp;B&nbsp;C</b> toggle so the exact same instrument speaks to a
+									sargam-trained musician and a Western-notation musician at once — down to the komal / teevra swara mapping and
+									a tanpura drone mode.
+								</p>
+								<p><a href="https://manyajainrkm.github.io/Harmoneyes/" target="_blank" rel="noopener" class="button">Play Harmoneyes</a></p>
+							</div>
 
 							<h3 style="margin-top: 18px;">Core Training</h3>
 							<ul style="clear:both;">
@@ -469,7 +576,6 @@
 							
 						</article>
 
-						</article>
 						<!-- pensées -->
 						<article id="pensees">
 							<h2 class="major">Pensées</h2>
