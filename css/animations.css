@@ -179,6 +179,20 @@
 	margin: 0 0 0.7rem;
 }
 
+.card-award {
+	font-size: 0.76rem;
+	line-height: 1.45;
+	color: rgba(233, 196, 90, 0.92);
+	margin: 0 0 0.55rem;
+	padding-left: 0.62rem;
+	border-left: 2px solid rgba(201, 162, 75, 0.55);
+}
+
+.card-award strong {
+	color: #f6d868;
+	font-weight: 700;
+}
+
 .card-demo {
 	align-self: flex-start;
 	margin-top: auto;
@@ -223,6 +237,7 @@
 	font-weight: 800;
 	letter-spacing: 0.14rem;
 	text-transform: uppercase;
+	white-space: nowrap;
 	color: #3a2a06;
 	overflow: hidden;
 	background: linear-gradient(100deg, #9a6a0f 0%, #e9c45a 18%, #fff6d0 36%, #f6d868 52%, #c9992f 72%, #8f5f0c 100%);
