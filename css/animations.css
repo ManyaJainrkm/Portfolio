@@ -223,6 +223,25 @@
 	transform: translateX(4px);
 }
 
+/* ---------- Rank badge: a placement, not a prize (kept visually distinct) ---------- */
+.rank-badge {
+	align-self: flex-start;
+	display: inline-flex;
+	align-items: center;
+	gap: 0.3rem;
+	margin-bottom: 0.5rem;
+	padding: 0.26rem 0.64rem;
+	border-radius: 999px;
+	font-size: 0.56rem;
+	font-weight: 700;
+	letter-spacing: 0.12rem;
+	text-transform: uppercase;
+	white-space: nowrap;
+	color: rgba(244, 237, 225, 0.92);
+	background: rgba(255, 255, 255, 0.08);
+	border: 1px solid rgba(255, 255, 255, 0.38);
+}
+
 /* ---------- Gold "Winner" badge (shines / reflects light) ---------- */
 .winner-badge {
 	position: relative;
