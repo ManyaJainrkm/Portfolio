@@ -430,7 +430,7 @@
 								<div class="flip-face flip-back">
 									<p class="card-desc">You answer three open questions in your own words, and a Work/Personal slider re-ranks your matches live &mdash; build partners at one end, people who share your humor at the other.</p>
 									<a class="card-demo" href="https://github.com/ManyaJainrkm/venn-connections" target="_blank" rel="noopener">View the code <span class="arrow">&rarr;</span></a>
-									<div class="flip-hint back">&larr; Back</div>
+									<a class="flip-hint back" href="#venn">Full write-up &rarr;</a>
 								</div>
 							</div>
 						</div>
@@ -583,6 +583,48 @@
 							</ul>
 							<p><a href="#projects" class="button">Back to projects</a></p>
 						</article>
+
+						<!-- Venn (opened from its project card) -->
+						<article id="venn">
+							<h2 class="major">Venn</h2>
+							<p style="font-size: 20px; line-height: 1.5;">A student-connection app that matches people on how they write about themselves, rather than on labels like major, year or job title.</p>
+							<p>Personal project, October&ndash;November 2026. The concept, the questions and the layout are mine. Public full-stack repository; <b>not yet deployed to a public URL.</b></p>
+							<h3 style="margin-top: 18px;">The idea</h3>
+							<p>Most campus matching tools sort people by the things that fit in a dropdown &mdash; major, year, interests picked from a list. Those are the least interesting things about anyone. Venn asks three open questions instead and matches on the answers themselves, so two people can be matched on a turn of phrase that no dropdown would ever have captured.</p>
+							<h3 style="margin-top: 18px;">What it does</h3>
+							<ul>
+								<li><b>Three open questions.</b> You answer in your own words, with optional activity preferences.</li>
+								<li><b>A Work/Personal slider</b> that re-ranks your matches live: slide left for study and build partners, right for the people who share your humor. The ordering changes as you drag, not on a submit.</li>
+								<li><b>Match detail:</b> open anyone and read their three answers with the phrases that matched yours highlighted, so the reason for the match is visible rather than asserted.</li>
+								<li><b>A connections log</b> at <code>/connections</code> recording every Connect request, newest first.</li>
+							</ul>
+							<h3 style="margin-top: 18px;">How it is built</h3>
+							<p>Venn is a single TanStack Start project: React pages, server functions and database access all live in one repository, with no separate backend service. The same code talks to a local SQLite file in development and to Turso in production &mdash; the database client picks its driver from the connection URL, so there is one code path and no environment-specific branching.</p>
+							<p>The backend is five tables and four server functions:</p>
+							<ul>
+								<li><b>Tables:</b> <code>people</code> and <code>person_answers</code> hold the eight starter profiles and their answers; <code>submissions</code> and <code>submission_answers</code> hold a visitor&rsquo;s onboarding, blend value and activity picks; <code>connection_requests</code> records each Connect click.</li>
+								<li><b>Server functions:</b> <code>getPeople</code> loads every person with their answers, <code>submitOnboarding</code> saves a visitor&rsquo;s answers and blend, <code>setConnection</code> records or toggles a Connect request, and <code>getConnectionRequests</code> lists the active ones.</li>
+							</ul>
+							<h3 style="margin-top: 18px;">How it got here</h3>
+							<p>Venn started as a frontend-only prototype. The first commit in my own repository strips the prototype&rsquo;s generated metadata; the next adds the real backend &mdash; schema, database client and server functions &mdash; and from there it grew the connections page, a Workers-safe database client, a deploy script and a browser-only deploy guide. Roughly three weeks, from a clickable mock-up to a deploy-ready full-stack app.</p>
+							<h3 style="margin-top: 18px;">Status</h3>
+							<p>The app runs locally in three commands and is ready to deploy, but it is not live yet: it needs a Turso database and a Cloudflare Workers project, which is browser work on my own accounts. GitHub Pages cannot host it, because Venn now runs server code against a database rather than serving static files &mdash; which is, in its way, the point of the rewrite.</p>
+							<p>Next: factor activity preferences into the match scoring, match visitors against each other rather than the eight seeded profiles, and add sign-in so a visitor becomes a returning user.</p>
+							<h3 style="margin-top: 18px;">Tech stack</h3>
+							<ul>
+								<li><b>Framework:</b> TanStack Start, React 19, Vite 8, TypeScript.</li>
+								<li><b>Styling:</b> Tailwind CSS 4, Radix UI, Motion.</li>
+								<li><b>Data:</b> Drizzle ORM with the libSQL client; SQLite locally, Turso in production.</li>
+								<li><b>Server:</b> TanStack Start server functions, no separate backend.</li>
+								<li><b>Hosting (planned):</b> Cloudflare Workers.</li>
+							</ul>
+							<h3 style="margin-top: 18px;">Links</h3>
+							<ul>
+								<li><a href="https://github.com/ManyaJainrkm/venn-connections" target="_blank" rel="noopener">Code</a> (public repository, with setup and deploy notes in the README)<br><small>No hosted demo yet. The eight profiles it matches against are written for the prototype, not real people.</small></li>
+							</ul>
+							<p><a href="#projects" class="button">Back to projects</a></p>
+						</article>
+
 
 
 
